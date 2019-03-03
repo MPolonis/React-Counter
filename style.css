@@ -1,0 +1,13 @@
+body {
+    text-align: center;
+    font-family: 'Concert One', cursive;
+    font-size: 24px;
+}
+
+.counter {
+    display: block;
+}
+
+.btn {
+    cursor: pointer;
+}
