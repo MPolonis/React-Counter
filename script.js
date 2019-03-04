@@ -42,7 +42,7 @@ var Counter = React.createClass({
         console.log('Komponent otrzymanuje nową właściwość');
     },
     shouldComponentUpdate: function (nextProps, nextState) {
-        console.log('Sprawdzanie zmian');
+        return true;
     },
     componentWillUpdate: function (nextProps, nextState) {
         console.log('Załadowanie zmian');
@@ -60,6 +60,19 @@ var Counter = React.createClass({
 
 });
 
+var Counters = React.createClass({
 
-var element = React.createElement(Counter);
+    render: function () {
+        return React.createElement('div', {},
+            React.createElement(Counter, {}),
+            React.createElement(Counter, {}),
+            React.createElement(Counter, {}),
+        );
+    },
+});
+
+
+
+var element = React.createElement(Counters);
+
 ReactDOM.render(element, document.getElementById('app'));
